@@ -3,7 +3,8 @@ const {createApp} = Vue;
 createApp({
     data(){
         return {
-            text : 'Hello world',
+            text : '',
+            externalSrc : '',
         }
     }
 }).mount('#root')

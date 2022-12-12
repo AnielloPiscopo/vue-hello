@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ita">
 <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,8 +14,10 @@
     <body>
         <div id="root">
             <main>
-                <h1>{{ text }}</h1>
-                <img src="" alt="">
+                <h1>{{text ? text : 'Valore non presente' }}</h1>
+                <input type="text" v-model.lazy.trim="text" placeholder="Inserisci un valore e premi invio">
+                <img alt="immagine casuale" title="immagine casuale" :src="externalSrc">
+                <input type="text" v-model.lazy.trim='externalSrc' placeholder="Inserisci l'URL dell'immagine da inserire">
             </main>
         </div>
     </body>
